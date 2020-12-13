@@ -198,7 +198,7 @@ def display_raw_data(df):
     pd.set_option('display.max_columns',200)
 
     while True:            
-         if raw.lower() == 'no':
+        if raw.lower() == 'no':
             break
         if raw.lower() == 'yes':
             print(df[i:i+5])
