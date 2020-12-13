@@ -198,11 +198,12 @@ def display_raw_data(df):
     pd.set_option('display.max_columns',200)
 
     while True:            
-        if raw == 'no':
+         if raw.lower() == 'no':
             break
-        print(df[i:i+5])
-        raw = input('\nDo you like to view the next five row of raw data? Enter yes or no.\n') # TO DO: convert the user input to lower case using lower() function
-        i += 5
+        if raw.lower() == 'yes':
+            print(df[i:i+5])
+            raw = input('\nDo you like to view the next five row of raw data? Enter yes or no.\n') # TO DO: convert the user input to lower case using lower() function
+            i += 5
 
 
 def main():
